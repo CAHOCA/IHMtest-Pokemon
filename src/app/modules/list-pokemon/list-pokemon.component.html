@@ -1,0 +1,16 @@
+<div *ngIf="pokemonlist.length>0" class="row" >
+  <div *ngFor="let pk of pokemonlist; let i=index;" (click)="printPokemonSelected(pk)" class="card col-md-6 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
+    <img class="card-img-top" [src]="pk.picture" [alt]="pk.name">
+    <div class="card-body">
+      <h5 class="card-title"><strong>{{pk.name |uppercase}}</strong></h5>
+      <p class="card-text">{{pk.created |date:'short'}}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>HP:</strong> {{pk.hp}}</li>
+      <li class="list-group-item"><strong>CP:</strong> {{pk.cp}}</li>
+      <li class="list-group-item"><strong>Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
+    </ul>
+  </div>
+</div>
+
