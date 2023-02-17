@@ -19,7 +19,15 @@ export class ListPokemonComponent implements OnInit {
   }
 
   printPokemonSelected(evt:Pokemon){
-    console.log(evt)
+    console.log(`Pokémon selected: ${evt.name}`)
+  }
+
+  deletePokemon(evt:Pokemon){
+    let index = this.pokemonlist.findIndex(obj => obj.id === evt.id);
+
+    if (index !== -1) {
+      this.pokemonlist.splice(index, 1);
+    }
   }
 
 }
