@@ -1,9 +1,11 @@
 <div *ngIf="pokemonlist.length>0" class="row" >
-  <div *ngFor="let pk of pokemonlist; let i=index;" (click)="printPokemonSelected(pk)" class="card col-md-6 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
-    <img class="card-img-top" [src]="pk.picture" [alt]="pk.name">
-    <div class="card-body">
+  <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-6 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
+
+    <img class="card-img-top" [src]="pk.picture" [alt]="pk.name" (click)="printPokemonSelected(pk)">
+
+    <div class="card-body" (click)="printPokemonSelected(pk)">
       <h5 class="card-title"><strong>{{pk.name |uppercase}}</strong></h5>
-      <p class="card-text">{{pk.created |date:'short'}}
+      <p class="card-text">{{pk.created |date:'M/d/Y'}}
       </p>
     </div>
     <ul class="list-group list-group-flush">
@@ -11,6 +13,13 @@
       <li class="list-group-item"><strong>CP:</strong> {{pk.cp}}</li>
       <li class="list-group-item"><strong>Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
     </ul>
+    <div class="card-footer d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-light text-danger">
+        <i (click)="deletePokemon(pk)" class="bi bi-trash"></i>
+      </button>
+
+    </div>
+
   </div>
 </div>
 
