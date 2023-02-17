@@ -1,5 +1,5 @@
 <div *ngIf="pokemonlist.length>0" class="row" >
-  <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-6 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
+  <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-4 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
 
     <img class="card-img-top" [src]="pk.picture" [alt]="pk.name" (click)="printPokemonSelected(pk)">
 
@@ -13,13 +13,38 @@
       <li class="list-group-item"><strong>CP:</strong> {{pk.cp}}</li>
       <li class="list-group-item"><strong>Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
     </ul>
-    <div class="card-footer d-grid gap-2 d-md-flex justify-content-md-end">
-      <button type="button" class="btn btn-light text-danger">
-        <i (click)="deletePokemon(pk)" class="bi bi-trash"></i>
+    <div class="card-footer d-grid gap-2 d-md-flex justify-content-md-end bg-white">
+      <button class="btn btn-light text-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="printPokemonSelected(pk)">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Details</strong>
       </button>
+      <button type="button" class="btn btn-light text-secondary btn-lg" (click)="dltPokemon(pk)">
+        <i  class="bi bi-trash"></i>
+        Delete
+      </button>
+
+
 
     </div>
 
   </div>
 </div>
 
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit {{pokemonSelected.name}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-pokemon-details [pokemon]="pokemonSelected"></app-pokemon-details>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+        <button type="button" class="btn btn-primary">Save chages</button>
+      </div>
+    </div>
+  </div>
+</div>

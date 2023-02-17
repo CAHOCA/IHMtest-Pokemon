@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { PokemonServiceService } from 'src/app/services/pokemon-service';
+
 
 @Component({
   selector: 'app-list-pokemon',
@@ -8,26 +8,32 @@ import { PokemonServiceService } from 'src/app/services/pokemon-service';
   styleUrls: ['./list-pokemon.component.scss']
 })
 export class ListPokemonComponent implements OnInit {
+  @Input() pokemonlist:Pokemon[]=[];
+  @Output() onDeletePokemon: EventEmitter<Pokemon> = new EventEmitter<Pokemon>();
+  pokemonSelected:Pokemon ={
+    name:'',
+    id:0,
+    picture:'',
+    types:[],
+    hp: 0,
+    cp: 0,
+    created:new Date()
+  };
 
-  pokemonlist:Pokemon[]=[];
 
-
-  constructor(private pokemonService: PokemonServiceService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.pokemonlist=this.pokemonService.getPokemonMonsters();
+    //console.log(this.pokemonlist)
   }
 
   printPokemonSelected(evt:Pokemon){
+    this.pokemonSelected=evt;
     console.log(`Pokémon selected: ${evt.name}`)
   }
 
-  deletePokemon(evt:Pokemon){
-    let index = this.pokemonlist.findIndex(obj => obj.id === evt.id);
-
-    if (index !== -1) {
-      this.pokemonlist.splice(index, 1);
-    }
+  dltPokemon(evt:Pokemon){
+    this.onDeletePokemon.emit(evt);
   }
 
 }
