@@ -1,0 +1,23 @@
+<form>
+  <div class="mb-3">
+    <label for="namePokemon" class="form-label">Name</label>
+    <input type="email" class="form-control" id="namePokemon" aria-describedby="emailHelp" [value]="pokemon==undefined?'':pokemon.name">
+    <div id="emailHelp" class="form-text">The name of pokémon.</div>
+  </div>
+  <div class="mb-3">
+    <label for="PokemonHP" class="form-label">HP</label>
+    <input type="number" class="form-control" id="PokemonHP" aria-describedby="HPHelp" [value]="pokemon==undefined?'':pokemon.hp">
+    <div id="HpHelp" class="form-text">Its power in numbers</div>
+  </div>
+  <div class="mb-3">
+    <label for="PokemonCP" class="form-label">CP</label>
+    <input type="number" class="form-control" id="PokemonCP" aria-describedby="CPHelp"
+      [value]="pokemon==undefined?'':pokemon.cp">
+    <div id="CpHelp" class="form-text">Its combat points in numbers</div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
