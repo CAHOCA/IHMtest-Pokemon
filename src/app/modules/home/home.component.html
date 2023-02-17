@@ -1,9 +1,16 @@
 <div class="container">
-    <div class="pb-4 mb-4 pt-2">
-      <h1 class="text-primary">Welcome to <strong>{{title}}</strong></h1>
-    </div>
 
-    <app-list-pokemon></app-list-pokemon>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid p-4">
+        <h1 class="text-primary">Welcome to <strong>{{title}}</strong></h1>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2"  placeholder="Search pokémon" aria-label="Search" (keyup)="filterPokemon($event)">
+        </form>
+      </div>
+    </nav>
+
+
+    <app-list-pokemon [pokemonlist]="lst" (onDeletePokemon)="deletePokemon($event)"></app-list-pokemon>
 
 </div>
 
