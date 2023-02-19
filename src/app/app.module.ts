@@ -8,6 +8,7 @@ import { PagComponent } from './modules/pag/pag.component';
 import { ListPokemonComponent } from './modules/list-pokemon/list-pokemon.component';
 import { PokemonFilterTextPipe } from './pipes/pokemon-filter-text.pipe';
 import { PokemonDetailsComponent } from './modules/pokemon-details/pokemon-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PokemonDetailsComponent } from './modules/pokemon-details/pokemon-detai
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [PokemonFilterTextPipe],
   bootstrap: [AppComponent]
