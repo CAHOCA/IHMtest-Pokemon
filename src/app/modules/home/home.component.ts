@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonFilterTextPipe } from 'src/app/pipes/pokemon-filter-text.pipe';
-import { PokemonServiceService } from 'src/app/services/pokemon-service';
+import { PokemonServiceService } from 'src/app/services/pokemon-service.service';
 
 
 @Component({
