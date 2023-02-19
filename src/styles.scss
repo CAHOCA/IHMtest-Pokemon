@@ -7,3 +7,29 @@ body{
   font-family: 'Nunito', sans-serif;
   background-color: #f8f9fa !important;
 }
+
+.form-control{
+  border-radius: 11px;
+}
+
+#staticBackdrop{
+  backdrop-filter: blur(10px);
+}
+
+.modal-content{
+  border-radius: 19px;
+}
+
+.no-bottom-border{
+  border-bottom: none;
+}
+
+.pd-modal{
+    padding: 2vh 4vh;
+}
+
+.form-switch .form-check-input {
+  width: 2.4em !important;
+  height: 1.3em !important;
+  margin-left: -2.9em !important;
+}

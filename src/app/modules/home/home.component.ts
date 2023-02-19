@@ -28,6 +28,7 @@ lstt:Pokemon[]=[];
 
     if (index !== -1) {
       this.lst.splice(index, 1);
+      this.lstt.splice(index, 1);
     }
   }
 

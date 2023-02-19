@@ -1,17 +1,17 @@
 <div *ngIf="pokemonlist.length>0" class="row" >
-  <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-4 col-xs-1 px-2 mx-4 mb-4" style="width: 18rem;">
+  <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-3 col-xs-12 px-2 mx-2 mb-4" style="width: 18rem;">
 
     <img class="card-img-top" [src]="pk.picture" [alt]="pk.name" (click)="printPokemonSelected(pk)">
 
     <div class="card-body" (click)="printPokemonSelected(pk)">
-      <h5 class="card-title"><strong>{{pk.name |uppercase}}</strong></h5>
+      <h5 class="card-title text-primary"><strong>{{pk.name |uppercase}}</strong></h5>
       <p class="card-text">{{pk.created |date:'M/d/Y'}}
       </p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><strong>HP:</strong> {{pk.hp}}</li>
-      <li class="list-group-item"><strong>CP:</strong> {{pk.cp}}</li>
-      <li class="list-group-item"><strong>Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
+      <li class="list-group-item"><strong class="text-primary">HP:</strong> {{pk.hp}}</li>
+      <li class="list-group-item"><strong class="text-primary">CP:</strong> {{pk.cp}}</li>
+      <li class="list-group-item"><strong class="text-primary">Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
     </ul>
     <div class="card-footer d-grid gap-2 d-md-flex justify-content-md-end bg-white">
       <button class="btn btn-light text-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="printPokemonSelected(pk)">
@@ -32,13 +32,13 @@
 
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit {{pokemonSelected.name}}</h1>
+      <div class="modal-header text-center no-bottom-border">
+        <h1 class="modal-title fs-5 text-primary center-txt" id="staticBackdropLabel">Edit <strong>{{pokemonSelected.name}}</strong></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body pd-modal">
         <app-pokemon-details [pokemon]="pokemonSelected"></app-pokemon-details>
       </div>
       <div class="modal-footer">
