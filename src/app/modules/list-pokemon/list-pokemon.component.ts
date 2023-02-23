@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon.model';
 
 
@@ -21,19 +22,28 @@ export class ListPokemonComponent implements OnInit {
   };
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
-    //console.log(this.pokemonlist)
+     const navigation = this.router.getCurrentNavigation();
+     console.log(navigation)
+      if (navigation?.extras?.state) {
+        const data = navigation.extras.state.data;
+        console.log(data)
+      }
   }
 
   printPokemonSelected(evt:Pokemon){
-    this.pokemonSelected=evt;
     console.log(`Pokémon selected: ${evt.name}`)
   }
 
   dltPokemon(evt:Pokemon){
     this.onDeletePokemon.emit(evt);
+  }
+
+  editPokemon(evt:Pokemon){    
+    this.pokemonSelected=evt;
+    this.router.navigate(['editPokemon/',evt.id]);
   }
 
 }

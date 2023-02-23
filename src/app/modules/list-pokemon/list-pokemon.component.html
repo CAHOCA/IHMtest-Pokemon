@@ -14,8 +14,8 @@
       <li class="list-group-item"><strong class="text-primary">Type:</strong> <span class="mx-2" *ngFor="let type of pk.types">{{type}},</span></li>
     </ul>
     <div class="card-footer d-grid gap-2 d-md-flex justify-content-md-end bg-white">
-      <button class="btn btn-light text-primary btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="printPokemonSelected(pk)">
-        <i class="bi bi-info-circle-fill"></i>
+      <button class="btn btn-light text-primary btn-lg" (click)="editPokemon(pk)">
+        <i class="bi bi-pencil-fill"></i>
         <strong>Details</strong>
       </button>
       <button type="button" class="btn btn-light text-secondary btn-lg" (click)="dltPokemon(pk)">

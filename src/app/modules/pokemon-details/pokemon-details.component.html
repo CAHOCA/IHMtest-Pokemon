@@ -1,75 +1,115 @@
-<form>
-  <div class="mb-3">
-    <label for="namePokemon" class="form-label text-primary">Name</label>
-    <input type="text" class="form-control" id="namePokemon" name="namePokemon" aria-describedby="emailHelp" [(ngModel)]="pokemon.name">
-    <div id="emailHelp" class="form-text">The name of pokémon.</div>
-  </div>
-  <div class="mb-3">
-    <label for="PokemonHP" class="form-label text-primary">HP</label>
-    <input type="number" class="form-control" id="PokemonHP" name="PokemonHP"  aria-describedby="HPHelp" [(ngModel)]="pokemon.hp">
-    <div id="HpHelp" class="form-text">Its power in numbers</div>
-  </div>
-  <div class="mb-3">
-    <label for="PokemonCP" class="form-label text-primary">CP</label>
-    <input type="number" class="form-control" id="PokemonCP" aria-describedby="CPHelp"
-      [value]="pokemon==undefined?'':pokemon.cp">
-    <div id="CpHelp" class="form-text">Its combat points in numbers</div>
-  </div>
-    <label  class="form-label text-primary">Types:</label>
-    <div class="row">
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pfire" [checked]="valcheckType('Feu')">
-          <label class="form-check-label" for="Pfire">Feu</label>
-        </div>
+<div class="container">
+  <nav class="navbar bg-body-tertiary text-start">
+    <div class="container-fluid p-4">
+        <button type="button" class="btn btn-light text-secondary btn-lg" routerLink="/">
+          <i class="bi bi-arrow-left-circle-fill"></i>
+          <strong class="mx-2">BACK</strong> 
+        </button>
+        <h1 class="text-primary" style="margin-right: 40%; margin-left: auto;">Edit <strong>{{NamePokemon}}</strong></h1>
+      
+    </div>
+  </nav>
+  
+
+  <div class="row g-0 align-items-center ">
+      <div class="col-md-4 text-center">
+        <img [src]="pokemon.picture" class="img-fluid" alt="">
       </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pwater" [checked]="valcheckType('Eau')">
-          <label class="form-check-label" for="Pwater">Eau</label>
+      <div class="col-md-8">
+        <form class="p-2">
+          <div class="mb-3">
+            <label for="namePokemon" class="form-label text-primary">Name</label>
+            <input type="text" class="form-control" id="namePokemon" name="namePokemon" aria-describedby="emailHelp"
+              [(ngModel)]="pokemon.name">
+            <div id="emailHelp" class="form-text">The name of pokémon.</div>
+          </div>
+          <div class="mb-3">
+            <label for="PokemonHP" class="form-label text-primary">HP</label>
+            <input type="number" class="form-control" id="PokemonHP" name="PokemonHP" aria-describedby="HPHelp"
+              [(ngModel)]="pokemon.hp">
+            <div id="HpHelp" class="form-text">Its power in numbers</div>
+          </div>
+          <div class="mb-3">
+            <label for="PokemonCP" class="form-label text-primary">CP</label>
+            <input type="number" class="form-control" id="PokemonCP" aria-describedby="CPHelp"
+              [value]="pokemon==undefined?'':pokemon.cp">
+            <div id="CpHelp" class="form-text">Its combat points in numbers</div>
+          </div>
+          <label class="form-label text-primary">Types:</label>
+          <div class="row">
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pfire" [checked]="valcheckType('Feu')"
+                  (change)="addOrDeletePokemonType($event,'Feu')">
+                <label class="form-check-label" for="Pfire">Feu</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pwater" [checked]="valcheckType('Eau')"
+                  (change)="addOrDeletePokemonType($event,'Eau')">
+                <label class="form-check-label" for="Pwater">Eau</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pinsect" [checked]="valcheckType('Insecte')"
+                  (change)="addOrDeletePokemonType($event,'Insecte')">
+                <label class="form-check-label" for="Pinsect">Insecte</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Ppoison" [checked]="valcheckType('Poison')"
+                  (change)="addOrDeletePokemonType($event,'Poison')">
+                <label class="form-check-label" for="Ppoison">Poison</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pplant" [checked]="valcheckType('Plante')"
+                  (change)="addOrDeletePokemonType($event,'Plante')">
+                <label class="form-check-label" for="Pplant">Plante</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pnormal" [checked]="valcheckType('Normal')"
+                  (change)="addOrDeletePokemonType($event,'Normal')">
+                <label class="form-check-label" for="Pnormal">Normal</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pflyer" [checked]="valcheckType('Vol')"
+                  (change)="addOrDeletePokemonType($event,'Vol')">
+                <label class="form-check-label" for="Pflyer">Vol</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pelectric" [checked]="valcheckType('Electrik')"
+                  (change)="addOrDeletePokemonType($event,'Electrik')">
+                <label class="form-check-label" for="Pelectric">Electrik</label>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-2">
+              <div class="mb-3 form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="Pfairy" [checked]="valcheckType('Fée')"
+                  (change)="addOrDeletePokemonType($event,'Fée')">
+                <label class="form-check-label" for="Pfairy">Fée</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-5">
+          <button type="button" class="btn btn-secondary btn-md" routerLink="/">Discard</button>
+          <button type="button" class="btn btn-primary btn-md" (click)="saveChanges()">Save chages</button>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pinsect" [checked]="valcheckType('Insecte')">
-          <label class="form-check-label" for="Pinsect">Insecte</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Ppoison" [checked]="valcheckType('Poison')">
-          <label class="form-check-label" for="Ppoison">Poison</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pplant" [checked]="valcheckType('Plante')">
-          <label class="form-check-label" for="Pplant">Plante</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pnormal" [checked]="valcheckType('Normal')">
-          <label class="form-check-label" for="Pnormal">Normal</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pflyer" [checked]="valcheckType('Vol')">
-          <label class="form-check-label" for="Pflyer">Vol</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pelectric" [checked]="valcheckType('Electrik')">
-          <label class="form-check-label" for="Pelectric">Electrik</label>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-2">
-        <div class="mb-3 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="Pfairy" [checked]="valcheckType('Fée')">
-          <label class="form-check-label" for="Pfairy">Fée</label>
-        </div>
+        
       </div>
     </div>
-</form>
+
+        
+</div>
+

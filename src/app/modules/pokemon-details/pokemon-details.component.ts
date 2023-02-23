@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon.model';
+import { PokemonServiceService } from 'src/app/services/pokemon-service.service';
 
 @Component({
   selector: 'app-pokemon-details',
@@ -16,14 +18,41 @@ export class PokemonDetailsComponent implements OnInit {
     types:[],
     created:new Date()    
   };
-  constructor() { }
+  NamePokemon = "";
+
+  constructor(private router: Router, private route: ActivatedRoute, private pokemonService: PokemonServiceService) { }
 
   ngOnInit(): void {
-    console.log(this.pokemon)
+    
+    if(this.route.snapshot.paramMap.get('id')!=undefined){
+      let id = Number(this.route.snapshot.paramMap.get('id'));
+      this.pokemon = this.pokemonService.getPokemonMonsters().filter((item) => item.id === id)[0];
+      this.NamePokemon = this.pokemon.name;
+    }
+    
   }
 
   valcheckType(desiredType:string):boolean{
       return this.pokemon.types.includes(desiredType);
+  }
+
+  addOrDeletePokemonType({target:{checked=false}}:any, typeStr:string){
+    if(!checked){
+      let indexToRemove = this.pokemon.types.indexOf(typeStr);
+      (indexToRemove > -1) ? this.pokemon.types.splice(indexToRemove, 1) : false;
+    }
+    else{
+      this.pokemon.types.push(typeStr);
+    }
+  }
+
+  saveChanges(){
+      const navigationExtras = {
+        state: {
+          data: this.pokemonService.setPokemonById(this.pokemon)
+        }
+      };
+    this.router.navigate(['/'], navigationExtras);
   }
 
 }
