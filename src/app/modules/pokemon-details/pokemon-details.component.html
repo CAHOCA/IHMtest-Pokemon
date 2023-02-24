@@ -3,36 +3,36 @@
     <div class="container-fluid p-4">
         <button type="button" class="btn btn-light text-secondary btn-lg" routerLink="/">
           <i class="bi bi-arrow-left-circle-fill"></i>
-          <strong class="mx-2">BACK</strong> 
+          <strong class="mx-2">BACK</strong>
         </button>
         <h1 class="text-primary" style="margin-right: 40%; margin-left: auto;">Edit <strong>{{NamePokemon}}</strong></h1>
-      
+
     </div>
   </nav>
-  
+
 
   <div class="row g-0 align-items-center ">
       <div class="col-md-4 text-center">
-        <img [src]="pokemon.picture" class="img-fluid" alt="">
+        <img [src]="pokemonForm.picture" class="img-fluid" alt="">
       </div>
       <div class="col-md-8">
         <form class="p-2">
           <div class="mb-3">
             <label for="namePokemon" class="form-label text-primary">Name</label>
             <input type="text" class="form-control" id="namePokemon" name="namePokemon" aria-describedby="emailHelp"
-              [(ngModel)]="pokemon.name">
+              [(ngModel)]="pokemonForm.name">
             <div id="emailHelp" class="form-text">The name of pokémon.</div>
           </div>
           <div class="mb-3">
             <label for="PokemonHP" class="form-label text-primary">HP</label>
             <input type="number" class="form-control" id="PokemonHP" name="PokemonHP" aria-describedby="HPHelp"
-              [(ngModel)]="pokemon.hp">
+              [(ngModel)]="pokemonForm.hp">
             <div id="HpHelp" class="form-text">Its power in numbers</div>
           </div>
           <div class="mb-3">
             <label for="PokemonCP" class="form-label text-primary">CP</label>
             <input type="number" class="form-control" id="PokemonCP" aria-describedby="CPHelp"
-              [value]="pokemon==undefined?'':pokemon.cp">
+              [value]="pokemonForm==undefined?'':pokemonForm.cp">
             <div id="CpHelp" class="form-text">Its combat points in numbers</div>
           </div>
           <label class="form-label text-primary">Types:</label>
@@ -106,10 +106,10 @@
           <button type="button" class="btn btn-secondary btn-md" routerLink="/">Discard</button>
           <button type="button" class="btn btn-primary btn-md" (click)="saveChanges()">Save chages</button>
         </div>
-        
+
       </div>
     </div>
 
-        
+
 </div>
 
