@@ -1,8 +1,16 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/IHMtest" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "env": {
