@@ -3,10 +3,11 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/IHMtest" }
+      "use": "@vercel/static-build"
     }
   ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/ihmtest",
   "routes": [
     {
       "src": "/(.*)",
@@ -14,6 +15,7 @@
     }
   ],
   "env": {
+    "NODE_VERSION": "12.22.12",
     "NODE_OPTIONS": "--openssl-legacy-provider"
   }
 }

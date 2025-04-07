@@ -1,0 +1,13 @@
+node_modules
+src
+e2e
+.angular
+.editorconfig
+README.md
+karma.conf.js
+tsconfig.*.json
+tslint.json
+angular.json
+*.ts
+*.spec.ts
+*.md
