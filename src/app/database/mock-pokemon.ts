@@ -793,5 +793,572 @@ export const PokemonMonsters : Pokemon[] =[
         picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/054.png",
         types: ["Eau"],
         created: new Date()
-      }
+      },
+        {
+    id: 89,
+    name: "Ferosinge",
+    hp: 25,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/056.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 90,
+    name: "Colossinge",
+    hp: 35,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/057.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 91,
+    name: "Caninos",
+    hp: 28,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/058.png",
+    types: ["Feu"],
+    created: new Date()
+  },
+  {
+    id: 92,
+    name: "Arcanin",
+    hp: 40,
+    cp: 14,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/059.png",
+    types: ["Feu"],
+    created: new Date()
+  },
+  {
+    id: 93,
+    name: "Ptitard",
+    hp: 22,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/060.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 94,
+    name: "Têtarte",
+    hp: 30,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/061.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 95,
+    name: "Tartard",
+    hp: 38,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/062.png",
+    types: ["Eau", "Combat"],
+    created: new Date()
+  },
+  {
+    id: 96,
+    name: "Abra",
+    hp: 15,
+    cp: 4,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/063.png",
+    types: ["Psy"],
+    created: new Date()
+  },
+  {
+    id: 97,
+    name: "Kadabra",
+    hp: 25,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/064.png",
+    types: ["Psy"],
+    created: new Date()
+  },
+  {
+    id: 98,
+    name: "Alakazam",
+    hp: 30,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/065.png",
+    types: ["Psy"],
+    created: new Date()
+  },
+  {
+    id: 99,
+    name: "Machoc",
+    hp: 25,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/066.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 100,
+    name: "Machopeur",
+    hp: 35,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/067.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 101,
+    name: "Machamp",
+    hp: 45,
+    cp: 13,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/068.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 102,
+    name: "Chétiflor",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/069.png",
+    types: ["Plante", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 103,
+    name: "Boustiflor",
+    hp: 28,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/070.png",
+    types: ["Plante", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 104,
+    name: "Empiflor",
+    hp: 38,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/071.png",
+    types: ["Plante", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 105,
+    name: "Tentacool",
+    hp: 22,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/072.png",
+    types: ["Eau", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 106,
+    name: "Tentacruel",
+    hp: 35,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/073.png",
+    types: ["Eau", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 107,
+    name: "Racaillou",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/074.png",
+    types: ["Roche", "Sol"],
+    created: new Date()
+  },
+  {
+    id: 108,
+    name: "Gravalanch",
+    hp: 30,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/075.png",
+    types: ["Roche", "Sol"],
+    created: new Date()
+  },
+  {
+    id: 109,
+    name: "Grolem",
+    hp: 40,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/076.png",
+    types: ["Roche", "Sol"],
+    created: new Date()
+  },
+  {
+    id: 110,
+    name: "Ponyta",
+    hp: 25,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/077.png",
+    types: ["Feu"],
+    created: new Date()
+  },
+  {
+    id: 111,
+    name: "Galopa",
+    hp: 35,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/078.png",
+    types: ["Feu"],
+    created: new Date()
+  },
+    {
+    id: 112,
+    name: "Ramoloss",
+    hp: 26,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/079.png",
+    types: ["Eau", "Psy"],
+    created: new Date()
+  },
+  {
+    id: 113,
+    name: "Flagadoss",
+    hp: 38,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/080.png",
+    types: ["Eau", "Psy"],
+    created: new Date()
+  },
+  {
+    id: 114,
+    name: "Dracaufeu",
+    hp: 39,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png",
+    types: ["Feu", "Vol"],
+    created: new Date()
+  },
+  {
+    id: 115,
+    name: "Magnéton",
+    hp: 30,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/082.png",
+    types: ["Electrik", "Acier"],
+    created: new Date()
+  },
+  {
+    id: 116,
+    name: "Canarticho",
+    hp: 22,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/083.png",
+    types: ["Normal", "Vol"],
+    created: new Date()
+  },
+  {
+    id: 117,
+    name: "Doduo",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/084.png",
+    types: ["Normal", "Vol"],
+    created: new Date()
+  },
+  {
+    id: 118,
+    name: "Dodrio",
+    hp: 32,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/085.png",
+    types: ["Normal", "Vol"],
+    created: new Date()
+  },
+  {
+    id: 119,
+    name: "Otaria",
+    hp: 24,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/086.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 120,
+    name: "Lamantine",
+    hp: 38,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/087.png",
+    types: ["Eau", "Glace"],
+    created: new Date()
+  },
+  {
+    id: 121,
+    name: "Tadmorv",
+    hp: 23,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/088.png",
+    types: ["Poison"],
+    created: new Date()
+  },
+  {
+    id: 122,
+    name: "Grotadmorv",
+    hp: 34,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/089.png",
+    types: ["Poison"],
+    created: new Date()
+  },
+  {
+    id: 123,
+    name: "Kokiyas",
+    hp: 19,
+    cp: 4,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/090.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 124,
+    name: "Crustabri",
+    hp: 33,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/091.png",
+    types: ["Eau", "Glace"],
+    created: new Date()
+  },
+  {
+    id: 125,
+    name: "Florizarre",
+    hp: 40,
+    cp: 13,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png",
+    types: ["Plante", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 126,
+    name: "Spectrum",
+    hp: 28,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/093.png",
+    types: ["Spectre", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 127,
+    name: "Ectoplasma",
+    hp: 36,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/094.png",
+    types: ["Spectre", "Poison"],
+    created: new Date()
+  },
+  {
+    id: 128,
+    name: "Onix",
+    hp: 30,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/095.png",
+    types: ["Roche", "Sol"],
+    created: new Date()
+  },
+  {
+    id: 129,
+    name: "Soporifik",
+    hp: 24,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/096.png",
+    types: ["Psy"],
+    created: new Date()
+  },
+  {
+    id: 130,
+    name: "Hypnomade",
+    hp: 36,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/097.png",
+    types: ["Psy"],
+    created: new Date()
+  },
+  {
+    id: 131,
+    name: "Krabby",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/098.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+    {
+    id: 132,
+    name: "Krabboss",
+    hp: 38,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/099.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 133,
+    name: "Voltorbe",
+    hp: 22,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/100.png",
+    types: ["Electrik"],
+    created: new Date()
+  },
+  {
+    id: 134,
+    name: "Électrode",
+    hp: 32,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/101.png",
+    types: ["Electrik"],
+    created: new Date()
+  },
+  {
+    id: 135,
+    name: "Noeunoeuf",
+    hp: 24,
+    cp: 6,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/102.png",
+    types: ["Plante", "Psy"],
+    created: new Date()
+  },
+  {
+    id: 136,
+    name: "Noadkoko",
+    hp: 38,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/103.png",
+    types: ["Plante", "Psy"],
+    created: new Date()
+  },
+  {
+    id: 137,
+    name: "Osselait",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/104.png",
+    types: ["Sol"],
+    created: new Date()
+  },
+  {
+    id: 138,
+    name: "Ossatueur",
+    hp: 32,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/105.png",
+    types: ["Sol"],
+    created: new Date()
+  },
+  {
+    id: 139,
+    name: "Kicklee",
+    hp: 35,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/106.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 140,
+    name: "Tygnon",
+    hp: 35,
+    cp: 11,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/107.png",
+    types: ["Combat"],
+    created: new Date()
+  },
+  {
+    id: 141,
+    name: "Excelangue",
+    hp: 30,
+    cp: 8,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/108.png",
+    types: ["Normal"],
+    created: new Date()
+  },
+  {
+    id: 142,
+    name: "Smogo",
+    hp: 20,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/109.png",
+    types: ["Poison"],
+    created: new Date()
+  },
+  {
+    id: 143,
+    name: "Smogogo",
+    hp: 34,
+    cp: 10,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/110.png",
+    types: ["Poison"],
+    created: new Date()
+  },
+  {
+    id: 144,
+    name: "Rhinocorne",
+    hp: 28,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/111.png",
+    types: ["Sol", "Roche"],
+    created: new Date()
+  },
+  {
+    id: 145,
+    name: "Rhinoféros",
+    hp: 42,
+    cp: 13,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/112.png",
+    types: ["Sol", "Roche"],
+    created: new Date()
+  },
+  {
+  id: 146,
+  name: "Amonita",
+  hp: 23,
+  cp: 6,
+  picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/138.png",
+  types: ["Roche", "Eau"],
+  created: new Date()
+  },
+  {
+    id: 147,
+    name: "Saquedeneu",
+    hp: 26,
+    cp: 7,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/114.png",
+    types: ["Plante"],
+    created: new Date()
+  },
+  {
+    id: 148,
+    name: "Kangourex",
+    hp: 40,
+    cp: 12,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/115.png",
+    types: ["Normal"],
+    created: new Date()
+  },
+  {
+    id: 149,
+    name: "Hypotrempe",
+    hp: 18,
+    cp: 4,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/116.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 150,
+    name: "Hypocéan",
+    hp: 30,
+    cp: 9,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/117.png",
+    types: ["Eau"],
+    created: new Date()
+  },
+  {
+    id: 151,
+    name: "Poissirène",
+    hp: 22,
+    cp: 5,
+    picture: "http://assets.pokemon.com/assets/cms2/img/pokedex/detail/118.png",
+    types: ["Eau"],
+    created: new Date()
+  }
 ];
