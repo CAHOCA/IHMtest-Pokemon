@@ -1,6 +1,6 @@
 # First Gen Pokémon Project
 
-**IHMtest Pokémon** is a web application developed with **Angular 12.2.7** that presents an interactive interface to display a selection of first-generation Pokémon. The design is based on **Bootstrap 5**, ensuring a modern and responsive experience.
+**IHMtest Pokémon** is a web application developed with **Angular 15.2.10** that presents an interactive interface to display a selection of first-generation Pokémon. The design is based on **Bootstrap 5**, ensuring a modern and responsive experience.
 
 ## Features
 
