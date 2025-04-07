@@ -15,7 +15,6 @@
     }
   ],
   "env": {
-    "NODE_VERSION": "12.22.12",
-    "NODE_OPTIONS": "--openssl-legacy-provider"
+    "NODE_VERSION": "18.x"
   }
 }
