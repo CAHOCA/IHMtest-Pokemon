@@ -57,7 +57,7 @@ Run end-to-end tests with a platform of your choice. You must first install a co
 
 ## 🧰 Technologies used
 
-- Angular 12.2.7
+- Angular 15.2.10
 - TypeScript
 - Bootstrap 5
 - HTML/CSS
