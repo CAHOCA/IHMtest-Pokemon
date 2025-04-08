@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/favicon.png" width="256" alt="Aircraft API Logo">
+  <img src="./src/assets/favicon.png" width="256" alt="Pokémon Logo">
 </p>
 
 # First Gen Pokémon Project
