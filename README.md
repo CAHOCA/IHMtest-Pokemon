@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./src/assets/favicon.png" width="256" alt="Aircraft API Logo">
+</p>
+
 # First Gen Pokémon Project
 
 **IHMtest Pokémon** is a web application developed with **Angular 15.2.10** that presents an interactive interface to display a selection of first-generation Pokémon. The design is based on **Bootstrap 5**, ensuring a modern and responsive experience.
