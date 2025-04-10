@@ -1,7 +1,7 @@
 <div *ngIf="pokemonlist.length>0" class="row" >
   <div *ngFor="let pk of pokemonlist; let i=index;"  class="card col-md-3 col-xs-12 px-2 mx-2 mb-4" style="width: 18rem;">
 
-    <img class="card-img-top" [src]="pk.picture" [alt]="pk.name" (click)="printPokemonSelected(pk)">
+    <img class="card-img-top mx-auto mt-4" [src]="'assets/pokemon_img/' + pk.id + '.png'" [alt]="pk.name" (click)="printPokemonSelected(pk)">
 
     <div class="card-body" (click)="printPokemonSelected(pk)">
       <h5 class="card-title text-primary"><strong>{{pk.name |uppercase}}</strong></h5>

@@ -6,8 +6,11 @@
 
 .card{
   transition: all 0.2s ease;
-    cursor: pointer;
+  cursor: pointer;
   border-radius: 17px;
+  img {
+    width: max-content;
+  }
 }
 
 .center-txt{
