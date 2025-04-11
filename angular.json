@@ -103,7 +103,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/font/font.scss",
               "src/styles.scss"
             ],
             "scripts": []
